@@ -208,7 +208,7 @@ namespace ClassTime
             this.textBox_days1.Size = new System.Drawing.Size(100, 22);
             this.textBox_days1.TabIndex = 28;
             this.textBox_days1.Text = "10";
-            // 
+           
             // label4_seconds
             // 
             this.label4_seconds.AutoSize = true;

@@ -3,10 +3,10 @@
 
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
 
 
 
@@ -152,12 +152,12 @@ namespace ClassTime
         {
             return (float)(days + hours / 24.0 + minutes / 1440.0 + seconds / 3600.0);
         }
-        // Переопределение метода ToString
+        // Переопределение метода ToString. Каждый объект в языке С# получает метод ToString, который возращает строковое представление данного объекта.
+        // При создании пользовательского класса необходимо переопределить метод,чтобы передать информацию о типе
         /// Преобразовать в строку всё время
         override public string ToString()
         {
-            return Convert.ToString(days) + " days  " + Convert.ToString(hours) + " hours  " + Convert.ToString(minutes) + " minutes  " + Convert.ToString(seconds) + " seconds  ";
+            return Convert.ToString(days) + " days " + Convert.ToString(hours) + " hours " + Convert.ToString(minutes) + " minutes " + Convert.ToString(seconds) + " seconds";
         }
-
     }
 }

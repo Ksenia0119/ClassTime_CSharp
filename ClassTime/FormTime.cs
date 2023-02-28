@@ -3,15 +3,15 @@
 
 
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+//using System.Collections.Generic;
+//using System.ComponentModel;
+//using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
+//using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 
 
@@ -23,11 +23,12 @@ namespace ClassTime
         Time Time1 = new Time();
         Time Time2 = new Time();
         Time Time3 = new Time();
-       
+        private Color mistake_color = Color.FromArgb(211, 110, 112);
+        private Color form_color = Color.FromArgb(175, 238, 238);
         public Form_Time()
         {
             InitializeComponent();
-            this.BackColor = Color.FromArgb(175, 238, 238);
+            this.BackColor = form_color;
         }
         ///Проверка корректности ввода данных
         private int CheckTime()
@@ -35,7 +36,7 @@ namespace ClassTime
             int chet = 0;
             if (Convert.ToInt32(textBox_days1.Text) < 0)
             {
-                textBox_days1.BackColor = Color.FromArgb(211, 110, 112); 
+                textBox_days1.BackColor = mistake_color; 
                 chet++;
                 labelError.Text = "Неправильно задан день";
             }
@@ -45,7 +46,7 @@ namespace ClassTime
 
             if (Convert.ToInt32(textBox_hours1.Text) < 0 || (Convert.ToInt32(textBox_hours1.Text) > 23))
             {
-                textBox_hours1.BackColor = Color.FromArgb(211, 110, 112);
+                textBox_hours1.BackColor = mistake_color;
                 chet++;
                 labelError.Text = "Неправильно заданы часы";
             }
@@ -54,7 +55,7 @@ namespace ClassTime
 
             if (Convert.ToInt32(textBox_minutes1.Text) < 0 || (Convert.ToInt32(textBox_minutes1.Text) > 59))
             {
-                textBox_minutes1.BackColor = Color.FromArgb(211, 110, 112);
+                textBox_minutes1.BackColor = mistake_color;
                 chet++;
                 labelError.Text = "Неправильно заданы минуты";
             }
@@ -63,7 +64,7 @@ namespace ClassTime
 
             if (Convert.ToInt32(textBox_seconds1.Text) < 0 || (Convert.ToInt32(textBox_seconds1.Text) > 59))
             {
-                textBox_seconds1.BackColor = Color.FromArgb(211, 110, 112);
+                textBox_seconds1.BackColor = mistake_color;
                 chet++;
                 labelError.Text = "Неправильно заданы секунды";
             }
@@ -72,7 +73,7 @@ namespace ClassTime
 
             if (Convert.ToInt32(textBox_days2.Text) < 0)
             {
-                textBox_days2.BackColor = Color.FromArgb(211, 110, 112);
+                textBox_days2.BackColor = mistake_color;
                 chet++;
                 labelError.Text = "Неправильно задан день";
             }
@@ -82,7 +83,7 @@ namespace ClassTime
 
             if (Convert.ToInt32(textBox_hours2.Text) < 0 || (Convert.ToInt32(textBox_hours2.Text) > 23))
             {
-                textBox_hours2.BackColor = Color.FromArgb(211, 110, 112);
+                textBox_hours2.BackColor = mistake_color;
                 chet++;
                 labelError.Text = "Неправильно заданы часы";
             }
@@ -91,7 +92,7 @@ namespace ClassTime
 
             if (Convert.ToInt32(textBox_minutes2.Text) < 0 || (Convert.ToInt32(textBox_minutes2.Text) > 59))
             {
-                textBox_minutes2.BackColor = Color.FromArgb(211, 110, 112);
+                textBox_minutes2.BackColor = mistake_color;
                 chet++;
                 labelError.Text = "Неправильно заданы минуты";
             }
@@ -100,7 +101,7 @@ namespace ClassTime
 
             if (Convert.ToInt32(textBox_seconds2.Text) < 0 || (Convert.ToInt32(textBox_seconds2.Text) > 59))
             {
-                textBox_seconds2.BackColor = Color.FromArgb(211, 110, 112);
+                textBox_seconds2.BackColor = mistake_color;
                 chet++;
                 labelError.Text = "Неправильно заданы секунды";
             }
@@ -153,7 +154,7 @@ namespace ClassTime
         ///Сложение 2х времен
         private void button1_add_Click(object sender, EventArgs e)
         {
-            if (CheckTime() == 0) //|| CheckDate2() == 0)
+            if (CheckTime() == 0) 
             {
                 SetTime();
 
@@ -181,6 +182,6 @@ namespace ClassTime
             }
         }
 
-
+       
     }
 }
