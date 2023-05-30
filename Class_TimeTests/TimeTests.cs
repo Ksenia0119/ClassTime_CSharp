@@ -50,12 +50,10 @@ namespace ClassTime.Tests
 
 
         [TestMethod()]
-        public void convert_to_Test() ///Конвертирование времени в разные форматы
+        public void convert_to_Test() ///Конвертирование времени 
         {
             Time t1 = new Time(10, 2, 3, 5);
-            //Assert.AreEqual(10,0868053436279, t1.convert_to_days(t1));
-            // Assert.AreEqual(242.133331298828, t1.convert_to_hours(t1));
-             //Assert.AreEqual(14523.0830078125, t1.convert_to_minutes(t1));
+        
             Assert.AreEqual(871385, t1.convert_to_seconds(t1));
 
         }
